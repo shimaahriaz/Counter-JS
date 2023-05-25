@@ -5,28 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter</title>
-    <style>
-        body{
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        .container{
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        span{
-            display: block;
-            text-align: center;
-            font-size: 7rem;
-            font-weight: bolder;
-            color: gray;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="container">
@@ -37,34 +16,7 @@
          <button class="btn reset">Reset</button>
          <button class="btn decrease">Decrese</button>   
       </div>
-     <script>
-        const counter = document.querySelector(".counter");
-        const button = document.querySelectorAll(".btn");
-        
-        let count = 0;
-        button.forEach(ele =>{
-            ele.addEventListener("click", (e) =>{
-                const styles = e.currentTarget.classList;
-                if(styles.contains("increase")){
-                    count++;
-                    counter.style.color = 'green'
-                }
-                if(styles.contains("decrease")){
-                    counter.style.color = 'red'
-                    count--;
-                    
-                }
-                if(styles.contains("reset")){
-                    count = 0;
-                    if(count === 0){
-                        counter.style.color = 'gray'
-                    }
-                    
-                    
-                }
-                counter.textContent = count;
-            })
-        })
+     <script src="main.js">
      </script>
 </body>
 </html>
